@@ -1,9 +1,8 @@
 <?php
 /*
 Selfish Bottom Feeder
-This bot will make a low bid on all auctions
-It then make whichever choice has the bigger potential payoff
-It does not care about karma
+This simple bot will make a low bid on all game auctions
+On games, it makes whichever choice has the bigger potential payoff
 */
 
 bid_on_games();
