@@ -3,6 +3,10 @@
 
 <a href="https://karmadilemma.com/">https://karmadilemma.com/</a>
 
+<p>Make sure you add your user_id and api_key before using any bots.</p>
+
+<p>Call all.php to call all the bots together.</p>
+
 <h2>List of Bots</h2>
 <ul>
 	<li>
