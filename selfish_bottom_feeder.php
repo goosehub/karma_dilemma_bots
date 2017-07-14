@@ -5,8 +5,23 @@ This simple bot will make a low bid on all game auctions
 On games, it makes whichever choice has the bigger potential payoff
 */
 
+// 
+// Authentication
+// 
+
+define('USER_ID', 1);
+define('API_KEY', '');
+
+// 
+// Actions
+// 
+
 bid_on_games();
 play_games();
+
+// 
+// Functions
+// 
 
 function bid_on_games() {
 	// Make this bid on all games, adjust as needed
@@ -85,13 +100,9 @@ function send_request($path, $data) {
 	// Info for debug
 	echo 'Calling ' . $path . ': ' . print_r($data, true) . PHP_EOL . '<br>';
 
-	// Authentication
-	$api_key = '';
-	$user_id = 1;
-
 	// Add authentication to post
-	$data['user_id'] = $user_id;
-	$data['api_key'] = $api_key;
+	$data['user_id'] = USER_ID;
+	$data['api_key'] = API_KEY;
 	$post = json_encode($data);
 
 	// Create URL
