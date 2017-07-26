@@ -9,8 +9,8 @@ On games, it makes whichever choice has the bigger potential payoff for the othe
 Authentication
 */ 
 
-define('USER_ID', 1);
-define('API_KEY', '');
+define('USER_ID', 5);
+define('API_KEY', 'e15085888659a1ea5f7f21a5ecd27233');
 
 /*
 Actions
@@ -74,13 +74,13 @@ function play_games() {
 		$best_payoff_choice = 0;
 		foreach ($game->payoffs as $payoff) {
 			if ($game->your_player_type) {
-				if ($payoff->secondary_payoff > $best_payoff_amount) {
+				if ($payoff->secondary_payoff < $best_payoff_amount) {
 					$best_payoff_amount = $payoff->secondary_payoff;
 					$best_payoff_choice = $payoff->secondary_choice;
 				}
 			}
 			else {
-				if ($payoff->primary_payoff > $best_payoff_amount) {
+				if ($payoff->primary_payoff < $best_payoff_amount) {
 					$best_payoff_amount = $payoff->primary_payoff;
 					$best_payoff_choice = $payoff->primary_choice;
 				}
